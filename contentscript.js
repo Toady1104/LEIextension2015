@@ -9,10 +9,6 @@ var divText;
 var loadOnce = 0;
 var latestLink;
 var codigoProcurado = "nothing";
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 350a340... Chrome.notifications deprecated
 //var storage = chrome.storage.local;
 
 //var regex2 = /artigo/;
@@ -239,10 +235,6 @@ if (regex.test(document.body.innerText))
     });
     */
 
-<<<<<<< HEAD
-=======
-
->>>>>>> parent of 350a340... Chrome.notifications deprecated
     if (loadOnce == 0)
     {
         $("#myDivId").load("http://www.planalto.gov.br/ccivil_03/Leis/2002/L10406.htm");
