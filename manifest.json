@@ -22,11 +22,6 @@
       "notifications"
   ],
 
-  "web_accessible_resources": [
-      "icon-48.png"
-  ],
-    //icon-48.png
-
   "content_scripts" : [
     {
       "matches" : [
