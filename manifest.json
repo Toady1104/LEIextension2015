@@ -18,7 +18,8 @@
      "tabs",
       "http://*/*",
       "https://*/*",
-      "storage"
+      "storage",
+      "notifications"
   ],
 
   "content_scripts" : [
