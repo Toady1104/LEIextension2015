@@ -1,0 +1,59 @@
+//import java.util.regex.Matcher; //HAS TO WORK
+//import java.util.regex.Pattern;
+
+//DEBUG:
+//console.log ("TEST");
+ 
+var regex = /art/;
+
+//var regex = /art/;
+
+//var regex = /art/;
+//var regex2 = /artigo/;
+
+// art(?. )
+if (regex.test(document.body.innerText))
+{
+	alert(":: DEBUG :: teste de linha 1.056");
+	
+	// OLD CODE padraoProcurado = new RegExp ("(?:art.{0,7}\\.|artigo).{0,7}\\d{1,4}", "gi");
+	
+	//padraoProcurado = new RegExp ("(artigo)\\.\\d{1,4})", "gi");
+	padraoProcurado = new RegExp ("(artigo|art)\\D{0,2}(\\d{1,4})", "gi"); // (palavra "artigo" OU "art", case independente) \\D = qualquer nao digito, (\\d{1,4}) = qualquer digito de no maximo 4 algarismos
+	
+	// WORKING CODE document.body.innerHTML = document.body.innerHTML.replace(padraoProcurado, "ARTIGO ENCONTRADO 4"); //(("\\. ") || ("igo")) //("art\\.")|("artigo")
+	
+	// ACHTUNG //-----------TESTING AREA--------// ACHTUNG //
+	var nameMatches = [];
+	var numberMatches = [];
+	
+	// WORKING CODE var paginaTexto = document.body.innerHTML;
+	var paginaTexto = "testo teste artigo 1234 e o art 321 teste";
+	
+	paginaTexto = paginaTexto.replace(padraoProcurado, function (match, $1, $2) {
+		nameMatches.push($1);
+		numberMatches.push($2);
+	});
+	
+	alert(numberMatches);
+	alert(paginaTexto);
+	
+	// FOR LATER document.body.innerHTML = document.body.innerHTML.replace(padraoProcurado, "ARTIGO ENCONTRADO"); //(("\\. ") || ("igo")) //("art\\.")|("artigo")
+	//document.body.innerHTML = document.body.innerHTML.replace(padraoProcurado, "ARTIGO ENCONTRADO");
+	
+	// ACHTUNG //-----------TESTING AREA--------// ACHTUNG //
+	
+	//var QUERY = 'art n'; Create a new querry to search on the target website
+	
+	
+//if (regex.test(document.body.innerText))
+//{
+	//document.body.innerHTML = document.body.innerHTML.replace(new RegExp("\\d\\d", "gi"), "XX"); //document.body.innerText
+	//document.body.innerHTML = document.body.innerHTML.replace(new RegExp( "artigo \\d\\d\\d" , "gi"), "O ARTIGO");
+	//document.body.innerHTML.replace(new RegExp("uno", "g"), "dos");
+	// The regular expression produced a match, so notify the background page.
+	chrome.extension.sendMessage({}, function(response) {});
+} else
+{
+	// No match was found.
+}

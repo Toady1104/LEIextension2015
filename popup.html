@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Set Page Color Popup</title>
+    <style>
+    body {
+      overflow: hidden;
+      margin: 0px;
+      padding: 0px;
+      background: white;
+    }
+
+    div:first-child {
+      margin-top: 0px;
+    }
+
+    div {
+      cursor: pointer;
+      text-align: center;
+      padding: 1px 3px;
+      font-family: sans-serif;
+      font-size: 0.8em;
+      width: 100px;
+      margin-top: 1px;
+      background: #cccccc;
+    }
+    div:hover {
+      background: #aaaaaa;
+    }
+    #penal {
+      border: 1px solid #000000;
+      color: #a00000;
+    }
+    #civil {
+      border: 1px solid #000000;
+      color: #0000a0;
+    }
+    #tributario {
+      border: 1px solid #000000;
+      color: #00a000;
+    }
+    #defesaConsumidor {
+      border: 1px solid #000000;
+      color: #a0a000;
+    }
+    </style>
+    <script src="contentscript.js"></script>
+  </head>
+  <body>
+    <div id="penal">Codigo Penal</div>
+    <div id="civil">Codigo Civil</div>
+    <div id="tributario">Codigo Tributario</div>
+    <div id="defesaConsumidor">Codigo de Defesa do Consumidor</div>
+  </body>
+</html>
