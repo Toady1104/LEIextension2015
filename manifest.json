@@ -18,8 +18,7 @@
      "tabs",
       "http://*/*",
       "https://*/*",
-      "storage",
-      "notifications"
+      "storage"
   ],
 
   "web_accessible_resources": [
