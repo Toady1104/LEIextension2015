@@ -33,11 +33,7 @@
         <entry file="file://$PROJECT_DIR$/manifest.json">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
-<<<<<<< HEAD
             <state line="23" column="18" selection-start="467" selection-end="478" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="1003">
-=======
-            <state line="39" column="4" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="918">
->>>>>>> parent of 94645f2... Chrome.notifications tests begin
 =======
             <state line="39" column="4" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="918">
 >>>>>>> parent of 94645f2... Chrome.notifications tests begin
@@ -50,16 +46,9 @@
         <entry file="file://$PROJECT_DIR$/contentscript.js">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
-<<<<<<< HEAD
             <state line="238" column="19" selection-start="7734" selection-end="7736" vertical-scroll-proportion="0.33333334" vertical-offset="3838" max-vertical-offset="5491">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-=======
-            <state line="97" column="0" selection-start="3452" selection-end="3452" vertical-scroll-proportion="0.73343605" vertical-offset="1173" max-vertical-offset="5474">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <marker date="1426614682504" expanded="true" signature="3149:3190" placeholder="..." />
->>>>>>> parent of 94645f2... Chrome.notifications tests begin
 =======
             <state line="97" column="0" selection-start="3452" selection-end="3452" vertical-scroll-proportion="0.73343605" vertical-offset="1173" max-vertical-offset="5474">
               <folding>
@@ -261,10 +250,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            <marker date="1426614682504" expanded="true" signature="3149:3190" placeholder="..." />
->>>>>>> parent of 94645f2... Chrome.notifications tests begin
 =======
             <marker date="1426614682504" expanded="true" signature="3149:3190" placeholder="..." />
 >>>>>>> parent of 94645f2... Chrome.notifications tests begin
@@ -285,10 +270,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            <marker date="1426614682504" expanded="true" signature="3149:3190" placeholder="..." />
->>>>>>> parent of 94645f2... Chrome.notifications tests begin
 =======
             <marker date="1426614682504" expanded="true" signature="3149:3190" placeholder="..." />
 >>>>>>> parent of 94645f2... Chrome.notifications tests begin
@@ -309,10 +290,6 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            <marker date="1426614682504" expanded="true" signature="3149:3190" placeholder="..." />
->>>>>>> parent of 94645f2... Chrome.notifications tests begin
 =======
             <marker date="1426614682504" expanded="true" signature="3149:3190" placeholder="..." />
 >>>>>>> parent of 94645f2... Chrome.notifications tests begin
@@ -338,11 +315,7 @@
     <entry file="file://$PROJECT_DIR$/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
-<<<<<<< HEAD
         <state line="23" column="18" selection-start="467" selection-end="478" vertical-scroll-proportion="-15.038462" vertical-offset="0" max-vertical-offset="1003">
-=======
-        <state line="39" column="4" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="918">
->>>>>>> parent of 94645f2... Chrome.notifications tests begin
 =======
         <state line="39" column="4" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="918">
 >>>>>>> parent of 94645f2... Chrome.notifications tests begin
@@ -353,20 +326,14 @@
     <entry file="file://$PROJECT_DIR$/contentscript.js">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
-<<<<<<< HEAD
         <state line="238" column="19" selection-start="7734" selection-end="7736" vertical-scroll-proportion="0.33333334" vertical-offset="3838" max-vertical-offset="5491">
           <folding>
             <element signature="n#!!doc" expanded="true" />
 =======
-=======
->>>>>>> parent of 94645f2... Chrome.notifications tests begin
         <state line="97" column="0" selection-start="3452" selection-end="3452" vertical-scroll-proportion="0.73343605" vertical-offset="1173" max-vertical-offset="5474">
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <marker date="1426614682504" expanded="true" signature="3149:3190" placeholder="..." />
-<<<<<<< HEAD
->>>>>>> parent of 94645f2... Chrome.notifications tests begin
-=======
 >>>>>>> parent of 94645f2... Chrome.notifications tests begin
           </folding>
         </state>
