@@ -87,6 +87,7 @@ if (regex.test(document.body.innerText))
 
     //linkify:
 
+
     document.body.innerHTML = paginaTexto.replace(padraoProcurado,
     function (match, p1, p2, p3, p4)
     {
@@ -244,8 +245,9 @@ if (regex.test(document.body.innerText))
         $("#myDivId").load("http://www.planalto.gov.br/ccivil_03/Leis/2002/L10406.htm");
         //divText = div.body.innerHTML;
         loadOnce = 1;
-        //alert ("entered loadonce now");
+        //alert ("entered loadonce");
     }
+
 
     function getLink() {
         //alert(this.href);
@@ -253,9 +255,23 @@ if (regex.test(document.body.innerText))
         //alert(latestLink);
     }
 
+    function HtmlEncode(s)
+    {
+        var el = document.createElement("div");
+        el.innerText = el.textContent = s;
+        s = el.innerHTML;
+        return s;
+    }
 
+    function alertSpecial(msg) {
+        msg = $('<span/>').html(msg).text();
+        //alert(msg);
+        return (msg);
+    }
 
-    $("#myDivId").hide();
+    // BRING IT BACK $("#myDivId").hide();
+    $("#myDivId").show();
+
 	///Mouse enter Test:
                     //$(document).ready(function () { /*Unnecessary?*/
         $(document).on('mouseenter', '.popuptest', function () {
@@ -284,8 +300,12 @@ if (regex.test(document.body.innerText))
             padraoProcuradoDiv = new RegExp (padraoProcuradoDivString, "g");
 
             var theMatch = padraoProcuradoDiv.exec(divText); //latestLink
-            //alert(theMatch);
-            div.innerText = theMatch[0];
+
+            var newMatch = alertSpecial(theMatch[0]);
+            div.innerHTML = HtmlEncode(newMatch);
+            //alert (HtmlEncode(theMatch[0]));
+            // alert (theMatch[0]); >> ALERT: MOUSEOVER ARTICLE EXPLANATION
+
                 // /(?:^|\s)format_(.*?)(?:\s|$)/.exec(myString);
 
             $("#myDivId").show();
@@ -298,8 +318,9 @@ if (regex.test(document.body.innerText))
         }).on('mouseleave', '.popuptest', function ()
             {
 
-            $("#myDivId").hide();
-            //$("#myDivId").load("http://www.planalto.gov.br/ccivil_03/Leis/2002/L10406.htm");
+            // BRING IT BACK $("#myDivId").hide();
+
+            $("#myDivId").load("http://www.planalto.gov.br/ccivil_03/Leis/2002/L10406.htm");
 
             $('span', '#myDivId').empty().remove();
                 //alert($(this));
