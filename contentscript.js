@@ -30,12 +30,6 @@ function click(e)
     */
     window.close();
 }
-document.addEventListener('DOMContentLoaded', function () {
-    var divs = document.querySelectorAll('div');
-    for (var i = 0; i < divs.length; i++) {
-        divs[i].addEventListener('click', click);
-    }
-});
 
 $(document).ready(function(){
 if (regex.test(document.body.innerText))
@@ -53,6 +47,16 @@ if (regex.test(document.body.innerText))
         //console output = myVariableKeyName {myTestVar:'my test var'}
     });
     */
+    //////////////////////////////////////////////////////
+
+    var TESTDIV = document.createElement( 'TESTDIV' );
+    //document.body.appendChild( TESTDIV );
+    TESTDIV.id = 'myDivId';
+    //$("#TESTDIV").load("http://pt.wikipedia.org/");
+
+
+
+    //////////////////////////////////////////////////////
 
     //alert(codigoProcurado);
 	//alert(":: DEBUG :: teste de linha 0.2.36");
@@ -63,7 +67,6 @@ if (regex.test(document.body.innerText))
 	padraoProcurado = new RegExp ("(artigo|art)(\\.{0,1})(\\s{0,1})(\\d{1,3})", "gi"); // (palavra "artigo" OU "art", case independente) \\D = qualquer nao digito, (\\d{1,4}) = qualquer digito de no maximo 4 algarismos
     padraoNumerico = new RegExp ("(\\d{1,3})", "gi");
     //var padraoProcuradoDiv="(?!(?:[^<]+>|[^>]+<\/a>))\b(" + value + ")\b";
-
 
     //var padraoProcuradoDivString = "(Art\. \\b(" + latestLink + ")\\b(.|\n.)+)";
 
@@ -95,7 +98,10 @@ if (regex.test(document.body.innerText))
         //return (p1 + p2 + p3);
         var linkA = ("http://www.planalto.gov.br/ccivil_03/Leis/2002/L10406.htm#art" + p4)
         return ("<a class='popuptest' href="+linkA+" style='color: #1599cb; text-decoration:underline' onclick=\"javascript:void window.open('http://www.planalto.gov.br/ccivil_03/Leis/2002/L10406.htm','1395670376154','width=650,height=750,toolbar=0,menubar=0,location=1,status=0,scrollbars=1,resizable=0,left=0,top=0');return false;\">"+p1+p2+p3+p4+"</a>");
+        //return ("<a href="+linkA+" onclick=\"document.getElementById('art151').scrollIntoView(true);return false;\">");
     });
+
+    //<a href="#" onclick="document.getElementById('ShowMeHow2').scrollIntoView(true);return false;">
 
     var links = document.getElementsByClassName("popuptest");
     for (i = 0; i < links.length; i++)
