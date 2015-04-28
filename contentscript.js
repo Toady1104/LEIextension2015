@@ -66,6 +66,7 @@ if (regex.test(document.body.innerText))
 	//padraoProcurado = new RegExp ("(artigo)\\.\\d{1,4})", "gi");
 	padraoProcurado = new RegExp ("(artigo|art)(\\.{0,1})(\\s{0,1})(\\d{1,3})", "gi"); // (palavra "artigo" OU "art", case independente) \\D = qualquer nao digito, (\\d{1,4}) = qualquer digito de no maximo 4 algarismos
     padraoNumerico = new RegExp ("(\\d{1,3})", "gi");
+
     //var padraoProcuradoDiv="(?!(?:[^<]+>|[^>]+<\/a>))\b(" + value + ")\b";
 
     //var padraoProcuradoDivString = "(Art\. \\b(" + latestLink + ")\\b(.|\n.)+)";
@@ -90,14 +91,28 @@ if (regex.test(document.body.innerText))
 
     //linkify:
 
-
+    function mainProcess()
+    {
     document.body.innerHTML = paginaTexto.replace(padraoProcurado,
     function (match, p1, p2, p3, p4)
     {
         //alert (p1);
         //return (p1 + p2 + p3);
         var linkA = ("http://www.planalto.gov.br/ccivil_03/Leis/2002/L10406.htm#art" + p4)
+        //alert(div.innerHTML); //Search for <strike>Art. 194
+        padraoCores = new RegExp ("<strike>Art. "+p4,"gi");
+        //alert(padraoCores);
+        if (padraoCores.test(div.innerHTML))
+        {
+        return ("<a class='popuptest' href="+linkA+" style='color: #B80000; text-decoration:underline' onclick=\"javascript:void window.open('http://www.planalto.gov.br/ccivil_03/Leis/2002/L10406.htm','1395670376154','width=650,height=750,toolbar=0,menubar=0,location=1,status=0,scrollbars=1,resizable=0,left=0,top=0');return false;\">"+p1+p2+p3+p4+"</a>");
+        }
+        else
+        {
         return ("<a class='popuptest' href="+linkA+" style='color: #1599cb; text-decoration:underline' onclick=\"javascript:void window.open('http://www.planalto.gov.br/ccivil_03/Leis/2002/L10406.htm','1395670376154','width=650,height=750,toolbar=0,menubar=0,location=1,status=0,scrollbars=1,resizable=0,left=0,top=0');return false;\">"+p1+p2+p3+p4+"</a>");
+        }
+
+        //red color: #B80000
+
         //return ("<a href="+linkA+" onclick=\"document.getElementById('art151').scrollIntoView(true);return false;\">");
     });
 
@@ -107,6 +122,7 @@ if (regex.test(document.body.innerText))
     for (i = 0; i < links.length; i++)
     {
         links[i].addEventListener('mouseover',getLink,false)
+    }
     }
 
     /*
@@ -248,11 +264,26 @@ if (regex.test(document.body.innerText))
 
     if (loadOnce == 0)
     {
-        $("#myDivId").load("http://www.planalto.gov.br/ccivil_03/Leis/2002/L10406.htm");
+        $("#myDivId").load("http://www.planalto.gov.br/ccivil_03/Leis/2002/L10406.htm", function()
+        {
+            mainProcess();
+        });
+
+        /*
+         .load( "ajax/test.html", function() {
+         alert( "Load was performed." );
+         });
+        */
         //divText = div.body.innerHTML;
         loadOnce = 1;
         //alert ("entered loadonce");
     }
+    /*
+    function mainProcess()
+    {
+        alert ("afterload!");
+    }
+    */
 
 
     function getLink() {
@@ -275,8 +306,8 @@ if (regex.test(document.body.innerText))
         return (msg);
     }
 
-    // BRING IT BACK $("#myDivId").hide();
-    $("#myDivId").show();
+    $("#myDivId").hide();
+    //$("#myDivId").show();
 
 	///Mouse enter Test:
                     //$(document).ready(function () { /*Unnecessary?*/
@@ -300,7 +331,6 @@ if (regex.test(document.body.innerText))
             //divText = divText.replace(padraoProcuradoDiv, "AAAAAAAAAAAAA");
             var theMatch = null;
 
-            //alert (latestLink);
             //alert(latestLink);
             var padraoProcuradoDivString = "(Art\. \\b(" + latestLink + ")\\b(.|\n|\n\\d)+)";
             padraoProcuradoDiv = new RegExp (padraoProcuradoDivString, "g");
@@ -324,7 +354,7 @@ if (regex.test(document.body.innerText))
         }).on('mouseleave', '.popuptest', function ()
             {
 
-            // BRING IT BACK $("#myDivId").hide();
+            $("#myDivId").hide();
 
             $("#myDivId").load("http://www.planalto.gov.br/ccivil_03/Leis/2002/L10406.htm");
 
