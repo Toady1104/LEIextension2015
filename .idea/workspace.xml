@@ -35,7 +35,7 @@
       <file leaf-file-name="contentscript.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contentscript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="83" selection-start="1696" selection-end="1696" vertical-scroll-proportion="0.23529412" vertical-offset="918" max-vertical-offset="6766">
+            <state line="99" column="9" selection-start="3212" selection-end="3212" vertical-scroll-proportion="0.29411766" vertical-offset="1428" max-vertical-offset="6851">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -219,7 +219,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/contentscript.js</url>
-          <line>278</line>
+          <line>282</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
@@ -340,7 +340,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contentscript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="83" selection-start="1696" selection-end="1696" vertical-scroll-proportion="0.23529412" vertical-offset="918" max-vertical-offset="6766">
+        <state line="99" column="9" selection-start="3212" selection-end="3212" vertical-scroll-proportion="0.29411766" vertical-offset="1428" max-vertical-offset="6851">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

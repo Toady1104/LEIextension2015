@@ -96,6 +96,11 @@ if (regex.test(document.body.innerText))
     document.body.innerHTML = paginaTexto.replace(padraoProcurado,
     function (match, p1, p2, p3, p4)
     {
+        if (p4.length == 4) //if it detected "Art dddd" instead of "Art d\.ddd" transform it into the later
+        {
+            p4 = p4[0] + "\." + p4.substring(1, p4.length);
+        }
+
         //alert (p1);
         //return (p1 + p2 + p3);
         var linkA = ("http://www.planalto.gov.br/ccivil_03/Leis/2002/L10406.htm#art" + p4)
