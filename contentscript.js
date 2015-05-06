@@ -96,9 +96,15 @@ if (regex.test(document.body.innerText))
     document.body.innerHTML = paginaTexto.replace(padraoProcurado,
     function (match, p1, p2, p3, p4)
     {
+        var nextArt = parseInt(p4)+1;
+
         if (p4.length == 4) //if it detected "Art dddd" instead of "Art d\.ddd" transform it into the later
         {
             p4 = p4[0] + "\." + p4.substring(1, p4.length);
+
+            nextArt = nextArt.toString();
+
+            nextArt = nextArt[0] + "\." + nextArt.substring(1, nextArt.length);
         }
 
         //alert (p1);
@@ -108,7 +114,7 @@ if (regex.test(document.body.innerText))
         padraoCores = new RegExp ("<strike>Art\\. "+p4+"(\\. |º)","gi");
 
         //(Art. 10)(.|\n)*(<strike>)(.|\n)*(Art. 11)
-        var nextArt = parseInt(p4)+1;
+
 
         padraoCoresAmarelo = new RegExp ("Art\\. "+p4+"(.|\n){0,2000}(<strike>)(.|\n){100,2000}/a>Art. "+nextArt+"\\.","i");
         //padraoCoresAmarelo = new RegExp ("Art. "+p4+"(.|\n){0,2500}(<strike>)(.|\n){0,2500}Art. "+nextArt,"gi"); //>Art. //Should happen: Art. +p4, + <anything> + </strike> + <anything> + ">Art. +(// p4+1)"

@@ -35,7 +35,7 @@
       <file leaf-file-name="contentscript.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contentscript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="99" column="9" selection-start="3212" selection-end="3212" vertical-scroll-proportion="0.29411766" vertical-offset="1428" max-vertical-offset="6851">
+            <state line="102" column="59" selection-start="3311" selection-end="3311" vertical-scroll-proportion="0.4117647" vertical-offset="1377" max-vertical-offset="6953">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -184,7 +184,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -219,7 +219,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/contentscript.js</url>
-          <line>282</line>
+          <line>288</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
@@ -340,7 +340,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contentscript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="9" selection-start="3212" selection-end="3212" vertical-scroll-proportion="0.29411766" vertical-offset="1428" max-vertical-offset="6851">
+        <state line="102" column="59" selection-start="3311" selection-end="3311" vertical-scroll-proportion="0.4117647" vertical-offset="1377" max-vertical-offset="6953">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
