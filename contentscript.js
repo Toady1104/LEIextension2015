@@ -64,7 +64,7 @@ if (regex.test(document.body.innerText))
 	// OLD CODE padraoProcurado = new RegExp ("(?:art.{0,7}\\.|artigo).{0,7}\\d{1,4}", "gi");
 
 	//padraoProcurado = new RegExp ("(artigo)\\.\\d{1,4})", "gi");
-	padraoProcurado = new RegExp ("(artigo|art)(\\.{0,1})(\\s{0,1})(\\d{1,3})", "gi"); // (palavra "artigo" OU "art", case independente) \\D = qualquer nao digito, (\\d{1,4}) = qualquer digito de no maximo 4 algarismos
+	padraoProcurado = new RegExp ("(artigo|art)(\\.{0,1})(\\s{0,1})(\\d\\.\\d{1,3}|\\d{1,4})", "gi"); // (palavra "artigo" OU "art", case independente) \\D = qualquer nao digito, (\\d{1,4}) = qualquer digito de no maximo 4 algarismos
     padraoNumerico = new RegExp ("(\\d{1,3})", "gi");
 
     //var padraoProcuradoDiv="(?!(?:[^<]+>|[^>]+<\/a>))\b(" + value + ")\b";
