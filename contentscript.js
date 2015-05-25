@@ -9,6 +9,7 @@ var divText;
 var loadOnce = 0;
 var latestLink;
 var codigoProcurado = "nothing";
+var popupPage;
 //var storage = chrome.storage.local;
 
 //var regex2 = /artigo/;
@@ -118,8 +119,6 @@ if (regex.test(document.body.innerText))
 
         descricao = padraoTooltip.exec(div.innerText);
 
-        descricao = decodeURIComponent(encodeURIComponent(descricao));
-
         //(Art. 10)(.|\n)*(<strike>)(.|\n)*(Art. 11)
 
         padraoCoresAmarelo = new RegExp ("Art\\. "+p4+"(.|\n){0,2000}(<strike>)(.|\n){100,2000}/a>Art. "+nextArt+"\\.","i");
@@ -154,6 +153,7 @@ if (regex.test(document.body.innerText))
     for (i = 0; i < links.length; i++)
     {
         links[i].addEventListener('mouseover',getLink,false)
+        links[i].addEventListener('click', openPopup,false)
     }
     }
 
@@ -318,10 +318,26 @@ if (regex.test(document.body.innerText))
     */
 
 
-    function getLink() {
+    function getLink()
+    {
         //alert(this.href);
         latestLink = padraoLinks.exec(this.href)[2];
         //alert(latestLink);
+    }
+
+    function openPopup()
+    {
+        padraoPoda =  new RegExp ("(.|\n){50,200}Art. ","i");
+
+        var podado = padraoPoda.exec(div.innerHTML);
+
+        var w = window.open('','1395670376154','width=650,height=750,toolbar=0,menubar=0,location=1,status=0,scrollbars=1,resizable=0,left=0,top=0');
+
+        //var w = window.open();
+        w.document.write( podado );
+        w.document.close();
+        //alert (linkNumber);
+        //window.open (div.html);
     }
 
     function HtmlEncode(s)
