@@ -114,9 +114,11 @@ if (regex.test(document.body.innerText))
             //alert(div.innerHTML); //Search for <strike>Art. 194
         padraoCores = new RegExp ("<strike>Art\\. "+p4+"(\\. |º)","gi");
 
-        padraoTooltip = new RegExp ("Art\\. "+p4+"((.|\n){300})","gi");
+        padraoTooltip = new RegExp ("Art\\. "+p4+"((.|\n){0,300})","gi");
 
         descricao = padraoTooltip.exec(div.innerText);
+
+        descricao = decodeURIComponent(encodeURIComponent(descricao));
 
         //(Art. 10)(.|\n)*(<strike>)(.|\n)*(Art. 11)
 
